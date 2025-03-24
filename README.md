@@ -1,46 +1,9 @@
-# Advanced HTML5 Elements and Forms
-
-## Objectives
-Implement HTML5 images, lists, tables, forms and input types.
-Use form validation attributes.
-Apply multimedia elements such as audio and video.
-
-## Instructions
-
-- Create an index.html file.
-- Add an ordered list with roman numerals
-- Add an external image from pexels.com
-- Add a table of 5 contacts with; name, address, mobile and emails
-- Add a registration form
-
->[!NOTE]
->  The registration form should have:
->- Name, email, password, and date fields.
->- A dropdown, radio buttons, and checkboxes.
->- Proper labels and placeholders.
->- Required fields and validation attributes.
->- Ensure proper indentation and commenting.
- 
-# Tasks
-- Create a well-structured HTML5 document.
-- Ensure semantic correctness.
-
-Happy Coding! 💻✨
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My document</title>
+    <title>Multimedia-Rich Webpage</title>
 </head>
 <body>
 
@@ -50,6 +13,8 @@ Happy Coding! 💻✨
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#registration">Register</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -57,8 +22,8 @@ Happy Coding! 💻✨
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I am learning HTML5 and building structured web pages.</p>
-        <img src="profile.jpg" alt="Profile Picture">
+        <p>Hello! I am learning HTML5 and building structured web pages with multimedia, forms, and tables.</p>
+        <img src="rename.jpg" alt="My favorite food" width="300" height="200">
     </section>
 
     <section id="services">
@@ -70,26 +35,101 @@ Happy Coding! 💻✨
         </ul>
     </section>
 
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <h3>Featured Video</h3>
+        <video width="400" controls>
+            <source src="smart-farming-water-technique.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h3>Featured Audio</h3>
+        <audio controls>
+            <source src="kalimba.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section id="registration">
+        <h2>Registration Form</h2>
+        <form action="submit-form.php" method="post">
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br><br>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+
+                <label for="profile">Upload Profile Picture:</label>
+                <input type="file" id="profile" name="profile" accept="image/*"><br><br>
+
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">I agree to the terms and conditions</label><br><br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing Table</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Price</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Web Development</td>
+                    <td>$500</td>
+                    <td>2 Weeks</td>
+                </tr>
+                <tr>
+                    <td>Graphic Design</td>
+                    <td>$200</td>
+                    <td>1 Week</td>
+                </tr>
+                <tr>
+                    <td>SEO Optimization</td>
+                    <td>$300</td>
+                    <td>10 Days</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
     <section id="contact">
         <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
-
+        <form action="send-message.php" method="post">
             <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="30" placeholder="Write your message here"></textarea><br><br>
-
+            <textarea id="message" name="message" rows="4" cols="30" placeholder="Write your message here" required></textarea><br><br>
             <button type="submit">Send</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2025 My document. All Rights Reserved.</p>
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
     </footer>
 
 </body>
 </html>
-
